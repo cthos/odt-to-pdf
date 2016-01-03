@@ -1,0 +1,11 @@
+#! /bin/bash
+
+if [ -z "$1" ]; then
+  echo "Please pass target folder."
+  exit 1
+fi
+
+APP_NAME=cthos/db-pdf
+TARGET_FOLDER=$1
+
+docker run -d -v $TARGET_FOLDER:/target --env TARGET_FOLDER=/target $APP_NAME
