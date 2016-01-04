@@ -19,6 +19,7 @@ RUN ldconfig
 COPY watch.sh /home/watchy/watch.sh
 COPY triggerwatch.sh /home/watchy/triggerwatch.sh
 RUN chmod +x /home/watchy/triggerwatch.sh
+RUN chmod +x /home/watchy/watch.sh
 
 WORKDIR '/home/watchy'
 CMD /home/watchy/triggerwatch.sh
