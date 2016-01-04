@@ -6,6 +6,6 @@ if [ -z "$1" ]; then
 fi
 
 APP_NAME=cthos/db-pdf
-TARGET_FOLDER=$1
+TARGET_FOLDER="$1"
 
-docker run -d -v $TARGET_FOLDER:/target --env TARGET_FOLDER=/target $APP_NAME
+docker run -d -v "$TARGET_FOLDER":/target --env TARGET_FOLDER=/target $APP_NAME
